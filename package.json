@@ -1,7 +1,13 @@
 {
   "name": "koishi-plugin-cobalt",
   "description": "koishi plugin for cobalt.tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "author": {
+    "name": "TEDIORELEE",
+    "email": "tediorelee@gmail.com",
+    "url": "https://github.com/tediorelee"
+  },
+  "private": false,
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -10,6 +16,12 @@
   ],
   "license": "MIT",
   "scripts": {},
+  "koishi": {
+    "description": {
+      "en": "Koishi plugin for cobalt.tools",
+      "zh": ""
+    }
+  },
   "keywords": [
     "chatbot",
     "koishi",
