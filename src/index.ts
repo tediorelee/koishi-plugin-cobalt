@@ -27,7 +27,7 @@ export function apply(ctx: Context, config: Config) {
     return await ctx.http.post(config.api, params, { headers });
   };
 
-  ctx.command('cobalt <link:text>', 'Download with cobalt')
+  ctx.command('cobalt <link:text>', '使用cobalt解析')
     .action(async ({session}, link) => {
       try {
         if (!link) return '缺少url链接!'

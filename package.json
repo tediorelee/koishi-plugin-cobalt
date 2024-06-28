@@ -7,6 +7,10 @@
     "email": "tediorelee@gmail.com",
     "url": "https://github.com/tediorelee"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tediorelee/koishi-plugin-cobalt"
+  },
   "private": false,
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -19,7 +23,7 @@
   "koishi": {
     "description": {
       "en": "Koishi plugin for cobalt.tools",
-      "zh": ""
+      "zh": "接入cobalt，可以下载Youtube/Bilibi/Tiktok/Twitter/Instagram等平台的视频图片等"
     }
   },
   "keywords": [
