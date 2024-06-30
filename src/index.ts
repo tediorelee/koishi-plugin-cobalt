@@ -51,7 +51,10 @@ export function apply(ctx: Context, config: Config) {
             session.send(h.video(url));
             break;
           case 'stream':
-            session.send(h.video(url));
+            const videoBuffer = await ctx.http.get<ArrayBuffer>(url, {
+              responseType: 'arraybuffer',
+            });
+            session.send(h.video(videoBuffer, 'video/mp4'));
             break;
         }
         
