@@ -5,11 +5,13 @@ import {} from '@koishijs/plugin-console'
 export const name = 'cobalt'
 
 export interface Config {
-  api: string;
+  api: string,
+  vQuality: string
 }
 
 export const Config = Schema.object({
   api: Schema.string().default('https://api.cobalt.tools/api/json').required().description('填写cobalt的api地址, 需要接上/api/json'),
+  vQuality: Schema.string().default('720').description('清晰度(手机推荐720)，144 / ... / 2160 / max'),
   description: Schema.string().default('自行部署教程地址').description('https://github.com/imputnet/cobalt/blob/current/docs/run-an-instance.md'),
 })
 
@@ -22,7 +24,7 @@ export function apply(ctx: Context, config: Config) {
     };
     const params = {
       url,
-      vQuality: "1080" // set video quality default 1080p(if possible)
+      vQuality: config.vQuality // set video quality default 1080p(if possible)
     };
     return await ctx.http.post(config.api, params, { headers });
   };
