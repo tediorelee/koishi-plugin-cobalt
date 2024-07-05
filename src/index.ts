@@ -1,4 +1,4 @@
-import { Context, Schema, h } from 'koishi'
+import { Context, Schema, h, pick } from 'koishi'
 import { resolve } from 'path'
 import {} from '@koishijs/plugin-console'
 
@@ -38,8 +38,8 @@ export function apply(ctx: Context, config: Config) {
           status, // error / redirect / stream / success / rate-limit / picker
           text,
           url,
-          // pickerType,
-          // picker,
+          pickerType,
+          picker,
           // audio
         } = result;
 
@@ -55,6 +55,11 @@ export function apply(ctx: Context, config: Config) {
               responseType: 'arraybuffer',
             });
             session.send(h.video(videoBuffer, 'video/mp4'));
+            break;
+          case 'picker':
+            picker.forEach(async item => {
+              await session.send(h.video(item.url));
+            });
             break;
         }
         
