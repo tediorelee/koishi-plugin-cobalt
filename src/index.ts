@@ -58,7 +58,11 @@ export function apply(ctx: Context, config: Config) {
             break;
           case 'picker':
             picker.forEach(async item => {
-              await session.send(h.video(item.url));
+              if (item.type === "photo") {
+                await session.send(h.image(item.url));
+              } else if (item.type === "video") {
+                await session.send(h.video(item.url));
+              }
             });
             break;
         }

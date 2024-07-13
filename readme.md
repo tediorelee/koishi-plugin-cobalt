@@ -11,6 +11,6 @@ koishi plugin for cobalt.tools
 - 推特视频(图片不支持)
 - Tiktok视频
 - Reddit视频
-- Instagram下载现在已失效，等cobalt作者fix
+- Instagram下载现在已失效，等cobalt作者fix(貌似已修复)
 
 

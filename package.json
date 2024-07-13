@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-cobalt",
   "description": "koishi plugin for cobalt.tools",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": {
     "name": "TEDIORELEE",
     "email": "tediorelee@gmail.com",
